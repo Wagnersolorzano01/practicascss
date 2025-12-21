@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla Comparativa - Evolución del HTML</title>
+
+    <!-- Hoja de estilos general del sitio -->
+    <link rel="stylesheet" href="estilos/estilos.css">
+</head>
+<body>
+
+    <!-- Encabezado Pincripal del sitio -->
+    <header class="header">
+        <img src="img/logo.png" alt="Logo Evolución del HTML" class="logo">
+        <h1 id="site-name">Evolución del HTML</h1>
+    </header>
+
+    <!-- Menú de Navegación -->
+    <nav class="menu">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="versiones.html">Versiones</a></li>
+            <li><a href="tablas.html">Tablas</a></li>
+            <li><a href="ventajas.html">Ventajas</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido  -->
+    <main class="contenedor">
+
+        <section>
+            <h2>Tabla Comparativa de Etiquetas HTML</h2>
+
+            <p>
+                En la siguiente tabla se comparan etiquetas obsoletas de versiones
+                antiguas de HTML con sus alternativas modernas recomendadas.
+            </p>
+
+            <table border="1" cellpadding="10" cellspacing="0" width="100%">
+
+                <thead>
+                    <tr>
+                        <th>Etiqueta Obsoleta</th>
+                        <th>Etiqueta Moderna</th>
+                        <th>Uso Recomendado</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>&lt;font&gt;</td>
+                        <td>CSS</td>
+                        <td>Usar CSS para controlar color y tipografía.</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;center&gt;</td>
+                        <td>CSS</td>
+                        <td>Usar <code>text-align: center</code>.</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;big&gt;</td>
+                        <td>CSS</td>
+                        <td>Controlar tamaño con <code>font-size</code>.</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;acronym&gt;</td>
+                        <td>&lt;abbr&gt;</td>
+                        <td>Definir abreviaturas correctamente.</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;u&gt;</td>
+                        <td>CSS</td>
+                        <td>Usar <code>text-decoration</code>.</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;strike&gt;</td>
+                        <td>&lt;del&gt;</td>
+                        <td>Indicar contenido eliminado.</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;frame&gt;</td>
+                        <td>&lt;iframe&gt;</td>
+                        <td>Incrustar contenido externo.</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;dir&gt;</td>
+                        <td>&lt;ul&gt;</td>
+                        <td>Usar listas no ordenadas.</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+    <!-- Pie de Página-->
+    <footer class="footer">
+        <p>© 2025 - Evolución del HTML | Wagner Solórzano</p>
+    </footer>
+
+</body>
+</html>
