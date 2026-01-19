@@ -5,65 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Evolución del HTML</title>
 
-    <!-- Hoja de estilos general del sitio -->
-    <link rel="stylesheet" href="estilos/estilos.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="SitioFramework/css/bootstrap.min.css">
 </head>
 <body>
 
-    <!-- Encabezado Principal del sitio-->
-    <header class="header">
-        <img src="img/logo.png" alt="Logo Evolución del HTML" class="logo">
-        <h1 id="site-name">Evolución del HTML</h1>
-    </header>
+    <!-- NAVBAR (MISMO ESTILO QUE TABLAS) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="img/logo.png" alt="Logo HTML" width="40" class="me-2">
+                Evolución del HTML
+            </a>
 
-    <!-- Menú de navegación -->
-    <nav class="menu">
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="versiones.html">Versiones</a></li>
-            <li><a href="tablas.html">Tablas</a></li>
-            <li><a href="ventajas.html">Ventajas</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menuNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="versiones.html">Versiones</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tablas.html">Tablas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ventajas.html">Ventajas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
-    <!-- Contenido principal -->
-    <main class="contenedor">
+    <!-- CONTENIDO -->
+    <main class="container my-5">
 
-        <section class="presentacion">
-            <h2>Carta de Presentación</h2>
+        <!-- INTRODUCCIÓN -->
+        <div class="text-center mb-5">
+            <h2>Bienvenido</h2>
             <p>
-                Este sitio web tiene como objetivo explicar cómo ha evolucionado el lenguaje HTML
-                desde sus primeras versiones hasta HTML5. Aquí encontrarás información clara,
-                organizada y ejemplos prácticos.
+                Este sitio web presenta la evolución del lenguaje HTML desde sus inicios hasta HTML5,
+                destacando su importancia y ventajas en el desarrollo web moderno.
             </p>
-        </section>
+        </div>
 
-        <!-- Utilización de Flexbox para organizar el contenido -->
-        <section class="contenido-flex">
+        <!-- CARDS -->
+        <div class="row justify-content-center g-4">
 
-            <article class="card">
-                <h3>Importancia del Código HTML</h3>
-                <p>
-                    HTML (HyperText Markup Language) es el lenguaje con el que se construyen
-                    las páginas web. Permite estructurar textos, imágenes, videos y enlaces.
-                </p>
-                <img src="img/imagen.png" alt="¿Qué es HTML?" class="media">
-            </article>
+            <!-- CARD 1 -->
+            <div class="col-md-6 col-lg-5">
+                <div class="card h-100 shadow-sm text-center">
+                    <div class="card-body">
+                        <h3>Importancia del Código HTML</h3>
+                        <p>
+                            HTML es el lenguaje base de la web. Permite estructurar textos, imágenes,
+                            videos y enlaces que los navegadores interpretan para mostrar contenido.
+                        </p>
 
-            <article class="card">
-                <h3>Introducción a HTML5</h3>
-                <video src="video/QueesHTML5.mp4" controls class="media"></video>
-            </article>
+                        <!-- IMAGEN MISMO TAMAÑO QUE ANTES -->
+                        <img 
+                            src="img/imagen.png"
+                            alt="Código HTML"
+                            class="img-fluid rounded mt-3"
+                            width="300">
+                    </div>
+                </div>
+            </div>
 
-        </section>
+            <!-- CARD 2 -->
+            <div class="col-md-6 col-lg-5">
+                <div class="card h-100 shadow-sm text-center">
+                    <div class="card-body">
+                        <h3>Introducción a HTML5</h3>
+                        <p>
+                            HTML5 introduce nuevas etiquetas semánticas, soporte multimedia nativo
+                            y mejoras para dispositivos móviles.
+                        </p>
+
+                        <!-- VIDEO MISMO TAMAÑO QUE LA IMAGEN -->
+                        <video 
+                            src="video/QueesHTML5.mp4"
+                            controls
+                            class="img-fluid rounded mt-3"
+                            width="300">
+                        </video>
+                    </div>
+                </div>
+            </div>
+
+        </div>
 
     </main>
 
-    <!-- Pie de Página-->
-    <footer class="footer">
-        <p>© 2025 - Aprendizaje práctico experimental (APE) - Wagner Solórzano</p>
+    <!-- FOOTER (TEXTO ORIGINAL, SIN CAMBIOS) -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p class="mb-0">© 2025 - Aprendizaje práctico experimental (APE) - Wagner Solórzano</p>
     </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="SitioFramework/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

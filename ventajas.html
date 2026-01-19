@@ -5,93 +5,146 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ventajas de HTML5 - Evolución del HTML</title>
 
-    <!-- Hoja de estilos general del sitio -->
-    <link rel="stylesheet" href="estilos/estilos.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="SitioFramework/css/bootstrap.min.css">
 </head>
-<body>
+<body class="bg-light">
 
-    <!-- Encabezado Principal del sitio -->
-    <header class="header">
-        <img src="img/logo.png" alt="Logo Evolución del HTML" class="logo">
-        <h1 id="site-name">Evolución del HTML</h1>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="img/logo.png" alt="Logo HTML" width="40" class="me-2">
+            Evolución del HTML
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menuNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="versiones.html">Versiones</a></li>
+                <li class="nav-item"><a class="nav-link" href="tablas.html">Tablas</a></li>
+                <li class="nav-item"><a class="nav-link active" href="ventajas.html">Ventajas</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- CONTENIDO -->
+<main class="container my-5">
+
+    <!-- TÍTULO -->
+    <header class="text-center mb-5">
+        <h1>Ventajas de HTML5</h1>
+        <p class="text-muted">
+            HTML5 introduce mejoras significativas para el desarrollo web moderno.
+        </p>
     </header>
 
-    <!-- Menú de Navegación-->
-    <nav class="menu">
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="versiones.html">Versiones</a></li>
-            <li><a href="tablas.html">Tablas</a></li>
-            <li><a href="ventajas.html">Ventajas</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
+    <!-- CARDS -->
+    <div class="row justify-content-center g-4">
 
-    <!-- Contenido Principal -->
-    <main class="contenedor">
+        <!-- CARD 1 -->
+        <div class="col-md-6 col-lg-5">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body text-center">
+                    <h3 class="card-title">Estructura Semántica</h3>
 
-        <section>
-            <h2>Ventajas de HTML5</h2>
+                    <ul class="text-start">
+                        <li>Uso de etiquetas semánticas</li>
+                        <li>Mejora la accesibilidad</li>
+                        <li>Mejor posicionamiento SEO</li>
+                    </ul>
 
-            <article>
-                <h3>1. Estructura Semántica y Código más Limpio</h3>
-                <ul>
-                    <li>Uso de etiquetas semánticas como header, nav, section y article.</li>
-                    <li>Mejora la accesibilidad y el posicionamiento en buscadores (SEO).</li>
-                </ul>
-                <p>
-                    Las nuevas etiquetas permiten organizar el contenido de forma clara y ordenada,
-                    facilitando el mantenimiento del sitio web.
-                </p>
-                <img src="img/Semántica.jpg" alt="Estructura semántica HTML5" class="media">
-            </article>
+                    <p>
+                        Las nuevas etiquetas permiten organizar el contenido de forma clara y ordenada,
+                        facilitando el mantenimiento del sitio web.
+                    </p>
 
-            <article>
-                <h3>2. Multimedia nativa sin necesidad de plugins</h3>
-                <ul>
-                    <li>Soporte nativo para audio y video.</li>
-                    <li>No requiere tecnologías externas como Flash.</li>
-                </ul>
-                <p>
-                    HTML5 permite insertar contenido multimedia directamente en el navegador,
-                    mejorando la compatibilidad y el rendimiento.
-                </p>
-                <video src="video/CallOfDutyMobile.mp4" controls muted class="media"></video>
-                <audio src="audio/CallOfDutyMobile.mp3" controls class="media"></audio>
-            </article>
+                    <img src="img/Semantica.jpg" alt="Estructura semántica" width="300" class="img-fluid rounded mt-3">
+                </div>
+            </div>
+        </div>
 
-            <article>
-                <h3>3. Compatible con Dispositivos Móviles</h3>
-                <ul>
-                    <li>Diseñado para adaptarse a diferentes tamaños de pantalla.</li>
-                    <li>Compatible con navegadores modernos.</li>
-                </ul>
-                <p>
-                    HTML5 facilita el desarrollo de sitios web accesibles desde celulares y tablets.
-                </p>
-                <img src="img/COMPATIBILIDAD.png" alt="Compatibilidad con dispositivos móviles" class="media">
-            </article>
+        <!-- CARD 2 -->
+        <div class="col-md-6 col-lg-5">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body text-center">
+                    <h3 class="card-title">Multimedia Nativa</h3>
 
-            <article>
-                <h3>4. APIs Modernas</h3>
-                <ul>
-                    <li>Incluye APIs como localStorage y canvas.</li>
-                    <li>Permite crear aplicaciones web más interactivas.</li>
-                </ul>
-                <p>
-                    Estas APIs amplían las capacidades del desarrollo web moderno.
-                </p>
-                <img src="img/API.jpg" alt="APIs modernas de HTML5" class="media">
-            </article>
+                    <ul class="text-start">
+                        <li>Audio y video integrados</li>
+                        <li>Sin necesidad de plugins</li>
+                        <li>Mayor compatibilidad</li>
+                    </ul>
 
-        </section>
+                    <p>
+                        HTML5 permite insertar contenido multimedia directamente en el navegador,
+                        mejorando la compatibilidad y el rendimiento.
+                    </p>
 
-    </main>
+                    <video src="video/CallOfDutyMobile.mp4" controls width="300" class="img-fluid rounded mt-3"></video>
+                </div>
+            </div>
+        </div>
 
-    <!-- Pie de Página-->
-    <footer class="footer">
-        <p>© 2025 - Evolución del HTML | Wagner Solórzano</p>
-    </footer>
+        <!-- CARD 3 -->
+        <div class="col-md-6 col-lg-5">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body text-center">
+                    <h3 class="card-title">Diseño Responsivo</h3>
+
+                    <ul class="text-start">
+                        <li>Compatible con móviles</li>
+                        <li>Adaptable a tablets</li>
+                        <li>Soporte moderno</li>
+                    </ul>
+
+                    <p>
+                        HTML5 facilita el desarrollo de sitios web accesibles desde celulares y tablets.
+                    </p>
+
+                    <img src="img/COMPATIBILIDAD.png" alt="Compatibilidad móvil" width="300" class="img-fluid rounded mt-3">
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="col-md-6 col-lg-5">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body text-center">
+                    <h3 class="card-title">APIs Modernas</h3>
+
+                    <ul class="text-start">
+                        <li>localStorage</li>
+                        <li>Canvas</li>
+                        <li>Geolocalización</li>
+                    </ul>
+
+                    <p>
+                        Estas APIs amplían las capacidades del desarrollo web moderno.
+                    </p>
+
+                    <img src="img/API.jpg" alt="APIs HTML5" width="300" class="img-fluid rounded mt-3">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-white text-center py-3 mt-5">
+    <p class="mb-0">© 2025 - Aprendizaje práctico experimental (APE) - Wagner Solórzano</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="SitioFramework/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

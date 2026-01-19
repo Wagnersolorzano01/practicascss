@@ -3,104 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabla Comparativa - Evolución del HTML</title>
+    <title>Tabla Comparativa - HTML</title>
 
-    <!-- Hoja de estilos general del sitio -->
-    <link rel="stylesheet" href="estilos/estilos.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="SitioFramework/css/bootstrap.min.css">
 </head>
 <body>
 
-    <!-- Encabezado Pincripal del sitio -->
-    <header class="header">
-        <img src="img/logo.png" alt="Logo Evolución del HTML" class="logo">
-        <h1 id="site-name">Evolución del HTML</h1>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="img/logo.png" alt="Logo HTML" width="40" class="me-2">
+            Evolución del HTML
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menuNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="versiones.html">Versiones</a></li>
+                <li class="nav-item"><a class="nav-link active" href="tablas.html">Tablas</a></li>
+                <li class="nav-item"><a class="nav-link" href="ventajas.html">Ventajas</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- CONTENIDO -->
+<main class="container my-5">
+
+    <header class="text-center mb-4">
+        <h1>Tabla Comparativa de HTML</h1>
+        <p class="lead">
+            Comparación entre versiones antiguas de HTML y HTML5,
+            destacando mejoras y nuevas funcionalidades.
+        </p>
     </header>
 
-    <!-- Menú de Navegación -->
-    <nav class="menu">
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="versiones.html">Versiones</a></li>
-            <li><a href="tablas.html">Tablas</a></li>
-            <li><a href="ventajas.html">Ventajas</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
+    <!-- TABLA RESPONSIVE -->
+    <section class="table-responsive">
+        <table class="table table-striped table-hover align-middle">
+            <thead class="table-dark">
+                <tr>
+                    <th>Característica</th>
+                    <th>HTML Antiguo</th>
+                    <th>HTML5</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Estructura semántica</td>
+                    <td>Limitada, uso excesivo de div</td>
+                    <td>Etiquetas semánticas (header, nav, section, footer)</td>
+                </tr>
+                <tr>
+                    <td>Multimedia</td>
+                    <td>Dependía de plugins externos</td>
+                    <td>Soporte nativo para audio y video</td>
+                </tr>
+                <tr>
+                    <td>Diseño responsivo</td>
+                    <td>No estaba contemplado</td>
+                    <td>Compatible con dispositivos móviles</td>
+                </tr>
+                <tr>
+                    <td>Formularios</td>
+                    <td>Campos básicos</td>
+                    <td>Nuevos tipos de entrada y validación</td>
+                </tr>
+                <tr>
+                    <td>Accesibilidad</td>
+                    <td>Limitada</td>
+                    <td>Mejor soporte para lectores de pantalla</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
 
-    <!-- Contenido  -->
-    <main class="contenedor">
+</main>
 
-        <section>
-            <h2>Tabla Comparativa de Etiquetas HTML</h2>
+<!-- FOOTER -->
+<footer class="bg-dark text-white text-center py-3">
+    <p class="mb-0">© 2025 - Aprendizaje práctico experimental (APE) - Wagner Solórzano</p>
+</footer>
 
-            <p>
-                En la siguiente tabla se comparan etiquetas obsoletas de versiones
-                antiguas de HTML con sus alternativas modernas recomendadas.
-            </p>
-
-            <table border="1" cellpadding="10" cellspacing="0" width="100%">
-
-                <thead>
-                    <tr>
-                        <th>Etiqueta Obsoleta</th>
-                        <th>Etiqueta Moderna</th>
-                        <th>Uso Recomendado</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr>
-                        <td>&lt;font&gt;</td>
-                        <td>CSS</td>
-                        <td>Usar CSS para controlar color y tipografía.</td>
-                    </tr>
-                    <tr>
-                        <td>&lt;center&gt;</td>
-                        <td>CSS</td>
-                        <td>Usar <code>text-align: center</code>.</td>
-                    </tr>
-                    <tr>
-                        <td>&lt;big&gt;</td>
-                        <td>CSS</td>
-                        <td>Controlar tamaño con <code>font-size</code>.</td>
-                    </tr>
-                    <tr>
-                        <td>&lt;acronym&gt;</td>
-                        <td>&lt;abbr&gt;</td>
-                        <td>Definir abreviaturas correctamente.</td>
-                    </tr>
-                    <tr>
-                        <td>&lt;u&gt;</td>
-                        <td>CSS</td>
-                        <td>Usar <code>text-decoration</code>.</td>
-                    </tr>
-                    <tr>
-                        <td>&lt;strike&gt;</td>
-                        <td>&lt;del&gt;</td>
-                        <td>Indicar contenido eliminado.</td>
-                    </tr>
-                    <tr>
-                        <td>&lt;frame&gt;</td>
-                        <td>&lt;iframe&gt;</td>
-                        <td>Incrustar contenido externo.</td>
-                    </tr>
-                    <tr>
-                        <td>&lt;dir&gt;</td>
-                        <td>&lt;ul&gt;</td>
-                        <td>Usar listas no ordenadas.</td>
-                    </tr>
-                </tbody>
-
-            </table>
-
-        </section>
-
-    </main>
-
-    <!-- Pie de Página-->
-    <footer class="footer">
-        <p>© 2025 - Evolución del HTML | Wagner Solórzano</p>
-    </footer>
+<!-- Bootstrap JS -->
+<script src="SitioFramework/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

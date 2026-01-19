@@ -5,77 +5,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto - Evolución del HTML</title>
 
-    <!-- Hoja de estilos general del sitio -->
-    <link rel="stylesheet" href="estilos/estilos.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="SitioFramework/css/bootstrap.min.css">
 
-    <!-- Font Awesome para íconos -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body>
+<body class="bg-light">
 
-    <!-- Encabezado Principal del Sitio -->
-    <header class="header">
-        <img src="img/logo.png" alt="Logo Evolución del HTML" class="logo">
-        <h1 id="site-name">Evolución del HTML</h1>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="img/logo.png" alt="Logo HTML" width="40" class="me-2">
+            Evolución del HTML
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menuNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="versiones.html">Versiones</a></li>
+                <li class="nav-item"><a class="nav-link" href="tablas.html">Tablas</a></li>
+                <li class="nav-item"><a class="nav-link" href="ventajas.html">Ventajas</a></li>
+                <li class="nav-item"><a class="nav-link active" href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- CONTENIDO -->
+<main class="container my-5">
+
+    <!-- TÍTULO -->
+    <header class="text-center mb-5">
+        <h1>Contacto</h1>
+        <p class="text-muted">
+            Puedes comunicarte con nosotros mediante el formulario o los datos de contacto.
+        </p>
     </header>
 
-    <!-- Menú de Navegación -->
-    <nav class="menu">
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="versiones.html">Versiones</a></li>
-            <li><a href="tablas.html">Tablas</a></li>
-            <li><a href="ventajas.html">Ventajas</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
+    <!-- CARDS -->
+    <div class="row justify-content-center g-4">
 
-    <!-- Contenido Principal -->
-    <main class="contenedor">
+        <!-- FORMULARIO -->
+        <div class="col-md-6 col-lg-5">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h3 class="text-center mb-4">Formulario de Contacto</h3>
 
-        <!-- Formulario -->
-        <section>
-            <h2>Formulario de Contacto</h2>
+                    <form>
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input type="text" id="nombre" class="form-control" required>
+                        </div>
 
-            <form>
-                <label for="nombre">Nombre:</label><br>
-                <input type="text" id="nombre" name="nombre" required><br><br>
+                        <div class="mb-3">
+                            <label for="correo" class="form-label">Correo</label>
+                            <input type="email" id="correo" class="form-control" required>
+                        </div>
 
-                <label for="correo">Correo:</label><br>
-                <input type="email" id="correo" name="correo" required><br><br>
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label">Mensaje</label>
+                            <textarea id="mensaje" rows="4" class="form-control" required></textarea>
+                        </div>
 
-                <label for="mensaje">Mensaje:</label><br>
-                <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br><br>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary">
+                                Enviar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
 
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
-        <!-- INFORMACIÓN DE CONTACTO -->
-        <section>
-            <h2>Información de Contacto</h2>
+        <!-- INFORMACIÓN -->
+        <div class="col-md-6 col-lg-5">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h3 class="text-center mb-4">Información de Contacto</h3>
 
-            <ul>
-                <li>
-                    <i class="fa-solid fa-envelope"></i>
-                    <strong>Correo:</strong> wasolorzano6@utpl.edu.ec
-                </li>
-                <li>
-                    <i class="fa-solid fa-phone"></i>
-                    <strong>Teléfono:</strong> +593 969 126 441
-                </li>
-                <li>
-                    <i class="fa-solid fa-location-dot"></i>
-                    <strong>Ciudad:</strong> Machala, Ecuador
-                </li>
-            </ul>
-        </section>
+                    <ul class="list-unstyled fs-5">
+                        <li class="mb-3">
+                            <i class="fa-solid fa-envelope me-2"></i>
+                            <strong>Correo:</strong> wasolorzano6@utpl.edu.ec
+                        </li>
+                        <li class="mb-3">
+                            <i class="fa-solid fa-phone me-2"></i>
+                            <strong>Teléfono:</strong> +593 969 126 441
+                        </li>
+                        <li class="mb-3">
+                            <i class="fa-solid fa-location-dot me-2"></i>
+                            <strong>Ciudad:</strong> Machala, Ecuador
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
-    </main>
+    </div>
 
-    <!-- Pie de Página -->
-    <footer class="footer">
-        <p>© 2025 - Evolución del HTML | Wagner Solórzano</p>
-    </footer>
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-white text-center py-3 mt-5">
+    <p class="mb-0">© 2025 - Aprendizaje práctico experimental (APE) - Wagner Solórzano</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="SitioFramework/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
